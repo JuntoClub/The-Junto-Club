@@ -8,14 +8,180 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="site">
-    <section class="art-page">
-      <img src="assets/junto-mobile-approved.png" alt="The Junto Club homepage">
-      <a class="tap chase" href="https://thechase.info" aria-label="The Chase"></a>
-      <a class="tap buy-packs" href="https://thechase.info" aria-label="Buy packs"></a>
-      <a class="tap shop-coins" href="#coins" aria-label="Shop coins"></a>
-      <a class="tap join" href="#join" aria-label="Join The Junto Club"></a>
+  <header class="mobile-bar">
+    <div class="mini-logo">JC</div>
+    <button aria-label="Open menu">☰</button>
+  </header>
+
+  <main class="paper">
+    <nav class="nav">
+      <a href="#about">About The Junto</a>
+      <a href="#how">How It Works</a>
+      <a href="#past">Past Releases</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:hello@thejuntoclub.com">Contact</a>
+      <a class="login" href="#join">Member Login</a>
+    </nav>
+
+    <section class="hero" id="about">
+      <aside class="margin-note note-left">READ.<br>TALK.<br>ARGUE.<br>REPEAT.</aside>
+      <aside class="margin-note note-right">nothing<br>great was<br>ever done<br>in silence.</aside>
+
+      <div class="seal">JC<span>THE JUNTO CLUB<br>EST. 2024</span></div>
+
+      <div class="portrait">
+        <div class="franklin-face"></div>
+        <p class="side-scribble">History<br>in your<br>hands.</p>
+      </div>
+
+      <div class="hero-copy">
+        <h1>The Junto Club</h1>
+        <p class="subtitle">A Society of American Collectors</p>
+        <h2>Discover America’s<br>Greatest Collectible Hunts</h2>
+        <p>Limited-edition pack games featuring rare coins, bullion, historic currency, and collectible treasures.</p>
+      </div>
+
+      <div class="meeting">
+        <div class="people"></div>
+        <p class="side-scribble">better<br>argument.<br>better<br>world.</p>
+      </div>
     </section>
+
+    <section class="section releases" id="releases">
+      <h2 class="section-title">Featured Releases</h2>
+      <p class="section-subtitle">Limited releases. Epic treasures.</p>
+
+      <div class="release-grid">
+        <article class="release-card">
+          <div class="ribbon live">Live Now</div>
+          <div class="pack chase-pack">
+            <div class="horse">♞</div>
+            <strong>The<br>Chase</strong>
+            <small>Series 001</small>
+            <div class="tiny-coins">● ● ●</div>
+          </div>
+          <div class="release-info">
+            <h3>The Chase</h3>
+            <p class="series">Series 001</p>
+            <ul>
+              <li>100 Packs Released</li>
+              <li>66 Packs Remaining</li>
+              <li>$99.99 Per Pack</li>
+            </ul>
+            <div class="buttons">
+              <a href="https://thechase.info">View Odds</a>
+              <a class="dark" href="https://thechase.info">Buy Packs</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="release-card">
+          <div class="ribbon">Coming Soon</div>
+          <div class="pack gold-pack">
+            <strong>Gold<br>Rush</strong>
+            <small>Series 002</small>
+          </div>
+          <div class="release-info">
+            <h3>Gold Rush</h3>
+            <p class="series">Series 002</p>
+            <ul>
+              <li>New Game</li>
+              <li>Epic Prizes</li>
+              <li>Stay Tuned</li>
+            </ul>
+            <div class="buttons">
+              <a class="dark" href="#join">Learn More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="release-card">
+          <div class="ribbon">Coming Soon</div>
+          <div class="pack future-pack">
+            <strong>Future<br>Expeditions</strong>
+            <small>Series 003</small>
+          </div>
+          <div class="release-info">
+            <h3>Future Expeditions</h3>
+            <p class="series">Series 003</p>
+            <ul>
+              <li>New Game</li>
+              <li>Epic Prizes</li>
+              <li>Stay Tuned</li>
+            </ul>
+            <div class="buttons">
+              <a class="dark" href="#join">Learn More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section coins" id="coins">
+      <div class="coin-side">for the<br>curious &<br>the obsessive.<br><br>✶<br>No kings.<br>Just ideas.</div>
+      <h2 class="section-title">Buy Coins Now</h2>
+      <p class="section-subtitle">Rare coins. Real history. Real value.</p>
+
+      <div class="coin-grid">
+        <article class="coin-card">
+          <div class="coin trade"><span>1876</span></div>
+          <h3>1876 Trade Dollar</h3>
+          <p>Historic. Iconic. Genuine.<br>Own a piece of history.</p>
+          <a href="#">Shop Now</a>
+        </article>
+
+        <article class="coin-card">
+          <div class="coin morgan"><span>1881</span></div>
+          <h3>1881-S Morgan Dollar</h3>
+          <p>America’s classic silver dollar.<br>Collector favorite.</p>
+          <a href="#">Shop Now</a>
+        </article>
+
+        <article class="coin-card">
+          <div class="coin indian"><span>1907</span></div>
+          <h3>Indian Cent</h3>
+          <p>The last of the Wheats.<br>A true piece of Americana.</p>
+          <a href="#">Shop Now</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section join" id="join">
+      <div class="join-copy">
+        <h2>Become a Member of<br>The Junto Club</h2>
+        <p>Join our private society of collectors and be the first to know about new releases, member-only drops, and exclusive offers.</p>
+      </div>
+
+      <form class="signup" name="junto-signup" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="junto-signup">
+        <label>
+          <span>Email Address</span>
+          <input name="email" type="email" placeholder="Email address">
+        </label>
+        <label>
+          <span>Mobile Number</span>
+          <input name="phone" type="tel" placeholder="Mobile number">
+        </label>
+        <button type="submit">Join The Club</button>
+        <small>We respect your privacy. Unsubscribe anytime.</small>
+      </form>
+
+      <div class="benefits">
+        <div><b>Early Access</b><span>Be the first to know about new releases.</span></div>
+        <div><b>Text Alerts</b><span>Get instant updates on sellouts and exclusive drops.</span></div>
+        <div><b>Member Only</b><span>Exclusive releases, special offers, and founder perks.</span></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="#about">About The Junto</a>
+      <a href="#how">How It Works</a>
+      <a href="#past">Past Releases</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:hello@thejuntoclub.com">Contact</a>
+      <a class="login" href="#join">Member Login</a>
+      <p>Collect better. Live curious.</p>
+    </footer>
   </main>
 </body>
 </html>

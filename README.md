@@ -1,15 +1,14 @@
-# The Junto Club — Fixed Artwork-Based Version
+# The Junto Club V2
 
-This version uses the approved artwork as the actual website visual, instead of trying to recreate it with CSS drawings.
+GitHub/Netlify-ready responsive website inspired by the approved vintage newspaper design.
 
-## Upload to GitHub
+## Upload
 
-Upload:
+Upload these files to the root of your GitHub repo:
+
 - index.html
 - style.css
-- assets/junto-mobile-approved.png
-
-Do not upload the ZIP itself.
+- README.md
 
 ## Netlify
 
@@ -18,8 +17,4 @@ Publish directory: blank or .
 
 ## Edit links
 
-Open index.html and update the href values for:
-- The Chase
-- Buy Packs
-- Shop Coins
-- Join The Club
+In `index.html`, replace the placeholder `href="#"` links for coin purchases and update the email address.
