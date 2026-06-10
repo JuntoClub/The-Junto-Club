@@ -1,32 +1,20 @@
-# The Junto Club Website
+# The Junto Club V2
 
-This is a GitHub/Netlify-ready static website using the exact uploaded homepage image as the visual design.
+GitHub/Netlify-ready responsive website inspired by the approved vintage newspaper design.
 
-## Files
+## Upload
 
-- `index.html` — homepage
-- `style.css` — layout and clickable overlay links
-- `assets/junto-club-homepage.png` — exact homepage artwork
+Upload these files to the root of your GitHub repo:
 
-## How to upload to GitHub
+- index.html
+- style.css
+- README.md
 
-1. Unzip this folder.
-2. Create a GitHub repository.
-3. Upload:
-   - `index.html`
-   - `style.css`
-   - `assets/`
-4. Connect the repository to Netlify.
-5. Build command: leave blank.
-6. Publish directory: leave blank or use `.`
+## Netlify
 
-## Editing links
+Build command: blank  
+Publish directory: blank or .
 
-Open `index.html` and change the `href` values for:
-- Buy Packs
-- View Odds
-- Learn More
-- Contact
-- Join The Club
+## Edit links
 
-The clickable areas are positioned in `style.css` under `.hotspot`.
+In `index.html`, replace the placeholder `href="#"` links for coin purchases and update the email address.
