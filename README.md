@@ -1,12 +1,14 @@
-# The Junto Club Newspaper Website
+# The Junto Club — Artwork-Based Website
 
-Fresh restart version. Upload the contents of this ZIP to the root of the GitHub repo.
+This version uses the approved mockup artwork as the visual page design. It does not recreate the newspaper with clean HTML cards.
 
-Keep only these items in the repo:
+Upload the contents of this ZIP to the root of the GitHub repo:
 
-- `index.html`
-- `style.css`
-- `assets/`
-- `README.md`
+- index.html
+- style.css
+- thank-you.html
+- assets/
 
-Delete older duplicate files like `styles.css`, `README.txt`, and any old mockup reference images before uploading.
+Delete all old files first so there is only one stylesheet and one index file.
+
+Clickable/functional areas are layered invisibly over the artwork.
