@@ -1,10 +1,3 @@
-The Junto Club responsive website
+Production-ready Junto Club responsive site.
 
-Open index.html in a browser. All images are in /assets and the layout is editable in index.html and styles.css.
-
-Included assets:
-- approved desktop and mobile mockups for reference
-- Chase pack artwork and odds-card artwork
-- extracted newspaper-style Franklin, club meeting, coin, and texture assets from the approved mockup
-
-To change purchase links, edit the href values in index.html.
+Upload the contents of this folder to Netlify or your web host. The approved desktop/mobile mockup files are intentionally not included and are not referenced anywhere in the live page, so there is no duplicate/overlapping background artwork.
