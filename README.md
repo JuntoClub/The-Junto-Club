@@ -1,11 +1,12 @@
-# The Junto Club Website
+# The Junto Club Newspaper Website
 
-Full replacement production package.
+Fresh restart version. Upload the contents of this ZIP to the root of the GitHub repo.
 
-Upload these files to the root of the GitHub repository:
+Keep only these items in the repo:
 
 - `index.html`
 - `style.css`
 - `assets/`
+- `README.md`
 
-This package intentionally uses only `style.css` and does not include `styles.css`, so there is no duplicate stylesheet conflict.
+Delete older duplicate files like `styles.css`, `README.txt`, and any old mockup reference images before uploading.
