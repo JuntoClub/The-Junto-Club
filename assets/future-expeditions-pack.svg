@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 310">
+  <rect width="220" height="310" fill="none"/>
+  <g fill="none" stroke="#15100a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 22h156l10 24v226l-15 18H37L22 272V46z"/>
+    <path d="M43 48h134v214H43z"/>
+    <path d="M58 66c25 9 78 8 104 0M58 244c25-9 78-8 104 0"/>
+    <circle cx="110" cy="154" r="43"/>
+    <path d="M110 98v112M54 154h112M79 123l62 62M141 123l-62 62"/>
+    <path d="M110 116l12 38-12 38-12-38z" fill="#15100a" opacity=".9"/>
+  </g>
+  <g fill="#15100a" text-anchor="middle" font-family="Georgia,serif">
+    <text x="110" y="96" font-size="26" font-weight="700">FUTURE</text>
+    <text x="110" y="126" font-size="22" font-weight="700">EXPEDITIONS</text>
+    <text x="110" y="238" font-size="16" font-weight="700">SERIES 003</text>
+  </g>
+</svg>
