@@ -1,25 +1,9 @@
-# The Junto Club — Fixed Artwork-Based Version
+Replace all existing website files with these.
 
-This version uses the approved artwork as the actual website visual, instead of trying to recreate it with CSS drawings.
-
-## Upload to GitHub
-
-Upload:
+Files included:
 - index.html
 - style.css
-- assets/junto-mobile-approved.png
+- assets/junto-desktop.png
+- assets/junto-mobile.png
 
-Do not upload the ZIP itself.
-
-## Netlify
-
-Build command: blank  
-Publish directory: blank or .
-
-## Edit links
-
-Open index.html and update the href values for:
-- The Chase
-- Buy Packs
-- Shop Coins
-- Join The Club
+This version removes the accidental phone-frame website and uses the approved mockups directly.
