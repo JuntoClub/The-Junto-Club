@@ -1,0 +1,10 @@
+{
+  "name": "junto-club-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@netlify/functions": "^4.2.5",
+    "stripe": "^22.2.0"
+  }
+}
