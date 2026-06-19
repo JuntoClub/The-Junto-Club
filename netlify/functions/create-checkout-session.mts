@@ -7,34 +7,25 @@ declare const Netlify: {
   };
 };
 
-const stripeSecretKey = Netlify.env.get("STRIPE_SECRET_KEY");
-const stripe = stripeSecretKey
-  ? new Stripe(stripeSecretKey, {
-      apiVersion: "2026-02-25.clover",
-    })
-  : null;
-
-const products = {
-  "chase-pack": {
-    priceId: Netlify.env.get("STRIPE_CHASE_PRICE_ID"),
-    quantity: 1,
-  },
-  numismatics: {
-    priceId: Netlify.env.get("STRIPE_NUMISMATICS_PRICE_ID"),
-    quantity: 1,
-  },
-};
-
-type ProductKey = keyof typeof products;
+type ProductKey = keyof ReturnType<typeof getProducts>;
 
 export default async (req: Request, _context: Context) => {
   if (req.method !== "POST") {
     return json({ error: "Method not allowed." }, 405);
   }
 
+  const stripeSecretKey = Netlify.env.get("STRIPE_SECRET_KEY");
+  const stripe = stripeSecretKey
+    ? new Stripe(stripeSecretKey, {
+        apiVersion: "2026-02-25.clover",
+      })
+    : null;
+
   if (!stripe) {
     return json({ error: "Stripe is not configured." }, 500);
   }
+
+  const products = getProducts();
 
   let product: ProductKey;
 
@@ -93,5 +84,18 @@ function json(body: unknown, status = 200) {
 }
 
 function isProductKey(product: string | undefined): product is ProductKey {
-  return Boolean(product && product in products);
+  return Boolean(product && product in getProducts());
+}
+
+function getProducts() {
+  return {
+    "chase-pack": {
+      priceId: Netlify.env.get("STRIPE_CHASE_PRICE_ID"),
+      quantity: 1,
+    },
+    numismatics: {
+      priceId: Netlify.env.get("STRIPE_NUMISMATICS_PRICE_ID"),
+      quantity: 1,
+    },
+  };
 }
