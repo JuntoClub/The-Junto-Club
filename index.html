@@ -16,7 +16,7 @@
 
     <!-- Desktop hotspots -->
     <a class="hotspot desktop view-odds" href="#odds" aria-label="View odds"></a>
-    <a class="hotspot desktop buy-packs" href="#buy-packs" aria-label="Buy packs"></a>
+    <a class="hotspot desktop buy-packs" href="/api/create-checkout-session" data-checkout-product="chase-pack" aria-label="Buy packs"></a>
     <a class="hotspot desktop learn-more" href="#gold-rush" aria-label="Learn more about Gold Rush"></a>
     <a class="hotspot desktop shop-coins" href="#coins" aria-label="Shop coins"></a>
     <a class="hotspot desktop faq" href="#faq" aria-label="FAQ"></a>
@@ -33,7 +33,7 @@
 
     <!-- Mobile hotspots -->
     <a class="hotspot mobile m-view-odds" href="#odds" aria-label="View odds"></a>
-    <a class="hotspot mobile m-buy-packs" href="#buy-packs" aria-label="Buy packs"></a>
+    <a class="hotspot mobile m-buy-packs" href="/api/create-checkout-session" data-checkout-product="chase-pack" aria-label="Buy packs"></a>
     <a class="hotspot mobile m-learn-more" href="#gold-rush" aria-label="Learn more about Gold Rush"></a>
     <a class="hotspot mobile m-shop1" href="#coins" aria-label="Shop Trade Dollar"></a>
     <a class="hotspot mobile m-shop2" href="#coins" aria-label="Shop Morgan Dollar"></a>
@@ -63,5 +63,6 @@
     <h2 id="shipping">Shipping</h2>
     <h2 id="contact">Contact</h2>
   </section>
+  <script src="stripe-checkout.js"></script>
 </body>
 </html>
