@@ -1,6 +1,6 @@
 :root {
   --page-bg: #050403;
-  --focus: rgba(255, 226, 145, 0.55);
+  --focus: transparent;
 }
 
 * { box-sizing: border-box; }
@@ -45,11 +45,22 @@ body {
   cursor: pointer;
 }
 
+/* Keep invisible overlay links/forms from showing yellow browser focus boxes */
+.hotspot:focus,
 .hotspot:focus-visible,
+.member-form:focus-within,
 .member-form input:focus,
+.member-form button:focus,
 .member-form button:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: none;
+}
+
+.member-form input:-webkit-autofill,
+.member-form input:-webkit-autofill:hover,
+.member-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: transparent;
+  transition: background-color 9999s ease-in-out 0s;
 }
 
 /* Whatnot illustrated button above the coins */
