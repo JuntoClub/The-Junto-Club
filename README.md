@@ -1,25 +1,16 @@
-# The Junto Club — Artwork-Based Website
+# The Junto Club Website
 
-This version uses the approved mockup artwork as the visual page design. It does not recreate the newspaper with clean HTML cards.
+Upload these files to the root of your GitHub repo:
 
-Upload the contents of this ZIP to the root of the GitHub repo:
+- `index.html`
+- `style.css`
+- `thank-you.html`
+- `assets/junto-club-homepage.png`
 
-- index.html
-- style.css
-- thank-you.html
-- assets/
+The page uses the approved artwork as the full visual design. Clickable invisible areas are layered over the Whatnot button, coin shop buttons, footer links, and membership form.
 
-Delete all old files first so there is only one stylesheet and one index file.
+To change the Whatnot destination, open `index.html` and replace:
 
-Clickable/functional areas are layered invisibly over the artwork.
+`https://www.whatnot.com/user/juntoclub`
 
-## Stripe checkout
-
-The Chase Buy Packs hotspots use Stripe Checkout through a Netlify Function, so the Stripe secret key is never exposed in browser code.
-
-Set these Netlify environment variables before going live:
-
-- `STRIPE_SECRET_KEY` — your Stripe secret key
-- `STRIPE_CHASE_PRICE_ID` — the Stripe Price ID for The Chase pack
-
-Apple Pay is supported through Stripe Checkout. To make it appear, enable Apple Pay/payment wallets in Stripe, verify the live domain `thechase.info` in Stripe's payment method domain settings, and make sure the site is served over HTTPS.
+with your exact Whatnot URL.

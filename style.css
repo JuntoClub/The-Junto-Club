@@ -1,47 +1,117 @@
+:root {
+  --page-bg: #050403;
+  --focus: rgba(255, 226, 145, 0.55);
+}
+
 * { box-sizing: border-box; }
-html, body { margin: 0; min-height: 100%; background: #050402; }
-body { font-family: Georgia, 'Times New Roman', serif; }
-.art-site { position: relative; width: min(100vw, 1536px); margin: 0 auto; line-height: 0; background:#050402; }
-.mockup-art { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
-.hotspot, .join-form { position: absolute; display: block; z-index: 5; }
-.hotspot { border-radius: 2px; background: rgba(255,255,255,0); }
-.hotspot:focus-visible, .join-form input:focus-visible, .join-form button:focus-visible { outline: 3px solid rgba(0,0,0,.75); outline-offset: 2px; background: rgba(255,255,255,.18); }
-.join-form { line-height: 1; }
-.join-form label, .join-form button { position: absolute; display: block; margin: 0; padding: 0; border: 0; background: transparent; }
-.join-form span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-.join-form input, .join-form button { width: 100%; height: 100%; opacity: .01; border: 0; background: transparent; color: transparent; cursor: pointer; }
-.join-form input { cursor: text; }
-.screen-reader-content { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
-.mobile { display: none; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background: var(--page-bg);
+  display: flex;
+  justify-content: center;
+  font-family: Georgia, serif;
+}
 
-/* Desktop image is 1536x1024. Coordinates use percentages of that artwork. */
-.view-odds  { left: 24.7%; top: 65.1%; width: 5.0%; height: 3.5%; }
-.buy-packs  { left: 30.4%; top: 65.1%; width: 5.4%; height: 3.5%; }
-.learn-more { left: 52.9%; top: 65.0%; width: 7.6%; height: 3.7%; }
-.shop-coins { left: 73.5%; top: 65.0%; width: 8.7%; height: 3.7%; }
-.faq        { left: 21.1%; top: 94.6%; width: 4.2%; height: 2.8%; }
-.shipping   { left: 27.0%; top: 94.6%; width: 7.0%; height: 2.8%; }
-.contact    { left: 37.0%; top: 94.6%; width: 6.2%; height: 2.8%; }
-.join-form.desktop { left: 65.8%; top: 72.2%; width: 22.0%; height: 16.4%; }
-.join-form.desktop label:nth-of-type(1) { left: 7%; top: 3%; width: 86%; height: 19%; }
-.join-form.desktop label:nth-of-type(2) { left: 7%; top: 27%; width: 86%; height: 19%; }
-.join-form.desktop label:nth-of-type(3) { left: 7%; top: 51%; width: 70%; height: 19%; }
-.join-form.desktop button { left: 7%; top: 74%; width: 86%; height: 20%; }
+.site-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: clamp(8px, 2vw, 24px);
+}
 
-@media (max-width: 760px) {
-  .art-site { width: min(100vw, 862px); }
-  .desktop { display: none !important; }
-  .mobile { display: block; }
-  /* Mobile image is 862x1824. */
-  .m-view-odds { left: 24.6%; top: 54.2%; width: 13.2%; height: 2.0%; }
-  .m-buy-packs { left: 24.6%; top: 56.8%; width: 13.2%; height: 2.1%; }
-  .m-learn-more { left: 59.5%; top: 56.6%; width: 18.8%; height: 2.2%; }
-  .m-shop1 { left: 20.0%; top: 67.2%; width: 13.1%; height: 1.9%; }
-  .m-shop2 { left: 50.0%; top: 67.2%; width: 13.1%; height: 1.9%; }
-  .m-shop3 { left: 79.5%; top: 67.2%; width: 13.1%; height: 1.9%; }
-  .join-form.mobile { left: 34.9%; top: 82.6%; width: 40.0%; height: 11.5%; }
-  .join-form.mobile label:nth-of-type(1) { left: 0; top: 0; width: 100%; height: 20%; }
-  .join-form.mobile label:nth-of-type(2) { left: 0; top: 27%; width: 100%; height: 20%; }
-  .join-form.mobile label:nth-of-type(3) { left: 0; top: 54%; width: 76%; height: 20%; }
-  .join-form.mobile button { left: 0; top: 78%; width: 100%; height: 22%; }
+.artwork-stage {
+  position: relative;
+  width: min(100%, 1024px);
+  line-height: 0;
+}
+
+.homepage-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+}
+
+.hotspot,
+.member-form {
+  position: absolute;
+  z-index: 5;
+}
+
+.hotspot {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hotspot:focus-visible,
+.member-form input:focus,
+.member-form button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Whatnot illustrated button above the coins */
+.whatnot-main {
+  left: 34%;
+  top: 42.8%;
+  width: 32%;
+  height: 3.6%;
+}
+
+/* Coin shop buttons */
+.coin-one { left: 17.4%; top: 70.8%; width: 12.1%; height: 2.7%; }
+.coin-two { left: 43.8%; top: 70.8%; width: 12.1%; height: 2.7%; }
+.coin-three { left: 69.4%; top: 70.8%; width: 12.1%; height: 2.7%; }
+
+/* Netlify form aligned over the drawn fields */
+.member-form {
+  left: 46.2%;
+  top: 78.55%;
+  width: 30.6%;
+  height: 13.6%;
+  display: grid;
+  grid-template-rows: 23% 23% 23% 31%;
+  gap: 4.5%;
+}
+
+.member-form input,
+.member-form button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  caret-color: #16100b;
+  font: 16px Georgia, serif;
+}
+
+.member-form input::placeholder { color: transparent; }
+.member-form button { cursor: pointer; }
+
+.footer-link { top: 95.2%; height: 2.2%; }
+.faq { left: 18.7%; width: 7.5%; }
+.shipping { left: 27.8%; width: 9.5%; }
+.contact { left: 39.6%; width: 9.5%; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .site-wrap { padding: 0; }
+  .artwork-stage { width: 100%; }
+  .homepage-art {
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
