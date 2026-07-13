@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gold Coin Leaderboard | The Junto Club</title>
+    <meta name="description" content="Track The Junto Club gold coins earned during live coin shows on Whatnot and see who is ready to redeem.">
+    <link rel="canonical" href="https://juntoclubco.com/leaderboard">
+    <meta property="og:title" content="Gold Coin Leaderboard | The Junto Club">
+    <meta property="og:description" content="Track The Junto Club gold coins earned during live coin shows on Whatnot and see who is ready to redeem.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://juntoclubco.com/leaderboard">
+    <meta property="og:image" content="https://juntoclubco.com/assets/junto-logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Gold Coin Leaderboard | The Junto Club">
+    <meta name="twitter:description" content="Track The Junto Club gold coins earned during live coin shows on Whatnot and see who is ready to redeem.">
+    <meta name="twitter:image" content="https://juntoclubco.com/assets/junto-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      document.documentElement.classList.add("leaderboard-enhanced");
+    </script>
+  </head>
+  <body class="leaderboard-page">
+    <main class="leaderboard-shell">
+      <header class="leaderboard-hero">
+        <a class="leaderboard-logo" href="/" aria-label="The Junto Club home">
+          <object data="assets/junto-logo.svg" type="image/svg+xml" aria-label="The Junto Club logo">
+            <object data="assets/junto-logo.png" type="image/png" aria-label="The Junto Club logo">
+              <span class="leaderboard-wordmark">THE JUNTO CLUB</span>
+            </object>
+          </object>
+        </a>
+
+        <nav class="brand-links" aria-label="Sibling brands">
+          <a href="https://juntoclubco.com">JUNTO CLUB</a>
+          <a href="https://megabreaks.com">MEGA BREAKS</a>
+        </nav>
+
+        <h1>Gold Coin Leaderboard</h1>
+        <!-- LEADERBOARD_GOAL_COPY:START -->
+        <p>
+          Gold coins are earned during live Junto Club shows on Whatnot. Reach
+          20 gold coins to redeem.
+        </p>
+        <!-- LEADERBOARD_GOAL_COPY:END -->
+      </header>
+
+      <section class="leaderboard-card" aria-labelledby="leaderboard-title">
+        <div class="leaderboard-toolbar">
+          <h2 id="leaderboard-title">Collectors</h2>
+          <label class="leaderboard-search">
+            <span>Find your Whatnot username</span>
+            <input
+              id="leaderboard-search"
+              type="search"
+              name="collector"
+              autocomplete="off"
+              placeholder="Search username"
+              aria-describedby="leaderboard-search-note"
+            >
+          </label>
+        </div>
+        <p id="leaderboard-search-note" class="leaderboard-note">
+          Search highlights the first matching collector and opens the full board.
+        </p>
+
+        <div class="leaderboard-table-wrap">
+          <table class="leaderboard-table">
+            <caption>Gold coin totals for The Junto Club collectors</caption>
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Collector</th>
+                <th scope="col">Gold</th>
+                <th scope="col">Progress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- LEADERBOARD:START -->
+              <tr class="leaderboard-row leaderboard-row--top" data-collector="coinhunter88">
+                <td class="rank-cell" data-label="Rank">1</td>
+                <td data-label="Collector">coinhunter88</td>
+                <td class="gold-cell" data-label="Gold">14</td>
+                <td data-label="Progress">
+                  <span class="progress-text">14 / 20</span>
+                  <span class="progress-track" aria-hidden="true">
+                    <span class="progress-fill" style="width: 70%;"></span>
+                  </span>
+                </td>
+              </tr>
+              <tr class="leaderboard-row leaderboard-row--top" data-collector="slabqueen">
+                <td class="rank-cell" data-label="Rank">2</td>
+                <td data-label="Collector">slabqueen</td>
+                <td class="gold-cell" data-label="Gold">11</td>
+                <td data-label="Progress">
+                  <span class="progress-text">11 / 20</span>
+                  <span class="progress-track" aria-hidden="true">
+                    <span class="progress-fill" style="width: 55%;"></span>
+                  </span>
+                </td>
+              </tr>
+              <tr class="leaderboard-row leaderboard-row--top" data-collector="wheatpennykid">
+                <td class="rank-cell" data-label="Rank">3</td>
+                <td data-label="Collector">wheatpennykid</td>
+                <td class="gold-cell" data-label="Gold">3</td>
+                <td data-label="Progress">
+                  <span class="progress-text">3 / 20</span>
+                  <span class="progress-track" aria-hidden="true">
+                    <span class="progress-fill" style="width: 15%;"></span>
+                  </span>
+                </td>
+              </tr>
+              <!-- LEADERBOARD:END -->
+            </tbody>
+          </table>
+        </div>
+
+        <section class="signup-panel" aria-labelledby="signup-title">
+          <h2 id="signup-title">Show Alerts</h2>
+          <p>[Placeholder] Get notified about upcoming shows and drops.</p>
+          <form
+            class="signup-form"
+            name="junto-leaderboard-signup"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thank-you.html"
+          >
+            <input type="hidden" name="form-name" value="junto-leaderboard-signup">
+            <p class="hidden">
+              <label>Don't fill this out: <input name="bot-field"></label>
+            </p>
+            <label class="signup-email">
+              <span>Email address</span>
+              <input type="email" name="email" required placeholder="you@email.com">
+            </label>
+            <button type="submit">Notify Me</button>
+          </form>
+        </section>
+
+        <button class="leaderboard-toggle" type="button" hidden>
+          Show full leaderboard
+        </button>
+
+        <!-- LAST_UPDATED:START -->
+        <p class="last-updated">Last updated: <time datetime="2026-08-08T22:14:00Z">August 8, 2026</time></p>
+        <!-- LAST_UPDATED:END -->
+      </section>
+
+      <section class="rules-section" aria-labelledby="rules-title">
+        <h2 id="rules-title">How It Works</h2>
+        <ul>
+          <li><strong>[Placeholder]</strong> How gold coins are earned.</li>
+          <li><strong>[Placeholder]</strong> Whether gold coins expire.</li>
+          <li><strong>[Placeholder]</strong> Whether gold coins transfer between accounts.</li>
+          <li><strong>[Placeholder]</strong> What you receive at 20 gold coins.</li>
+          <li><strong>[Placeholder]</strong> Dispute or miscount policy.</li>
+          <li><strong>Contact:</strong> <a href="mailto:hello@juntoclubco.com">hello@juntoclubco.com</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="leaderboard-footer">
+      <a href="https://www.whatnot.com/user/juntoclub">Watch Live on Whatnot</a>
+      <a href="mailto:hello@juntoclubco.com">hello@juntoclubco.com</a>
+    </footer>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.querySelector(".leaderboard-toggle");
+        var search = document.getElementById("leaderboard-search");
+        var rows = Array.prototype.slice.call(document.querySelectorAll(".leaderboard-row"));
+
+        function setExpanded(expanded) {
+          root.classList.toggle("leaderboard-expanded", expanded);
+          if (toggle) {
+            toggle.textContent = expanded ? "Show top 3 only" : "Show full leaderboard";
+            toggle.setAttribute("aria-expanded", String(expanded));
+          }
+        }
+
+        if (toggle && rows.length > 3) {
+          toggle.hidden = false;
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.addEventListener("click", function () {
+            setExpanded(!root.classList.contains("leaderboard-expanded"));
+          });
+        }
+
+        if (search) {
+          search.addEventListener("input", function () {
+            var query = search.value.trim().toLowerCase();
+            var match = null;
+
+            rows.forEach(function (row) {
+              row.classList.remove("leaderboard-row--match");
+              var collector = row.getAttribute("data-collector") || "";
+              if (!match && query && collector.indexOf(query) !== -1) {
+                match = row;
+              }
+            });
+
+            if (match) {
+              setExpanded(true);
+              match.classList.add("leaderboard-row--match");
+              match.scrollIntoView({ block: "center", behavior: "smooth" });
+            }
+          });
+        }
+      }());
+    </script>
+  </body>
+</html>

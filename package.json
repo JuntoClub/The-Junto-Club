@@ -6,5 +6,8 @@
   "dependencies": {
     "@netlify/functions": "^4.2.5",
     "stripe": "^22.2.0"
+  },
+  "scripts": {
+    "sync:leaderboard": "node scripts/sync-leaderboard.mjs"
   }
 }
