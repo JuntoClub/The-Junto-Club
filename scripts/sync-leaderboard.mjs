@@ -24,12 +24,6 @@ const nextData = {
 const page = await readFile(pagePath, "utf8");
 let nextPage = replaceRequired(
   page,
-  /<!-- LEADERBOARD_GOAL_COPY:START -->[\s\S]*?<!-- LEADERBOARD_GOAL_COPY:END -->/,
-  `<!-- LEADERBOARD_GOAL_COPY:START -->\n        <p>\n          Gold coins are earned during live Junto Club shows on Whatnot. Reach\n          ${goal} gold coins to redeem.\n        </p>\n        <!-- LEADERBOARD_GOAL_COPY:END -->`,
-  "LEADERBOARD_GOAL_COPY"
-);
-nextPage = replaceRequired(
-  nextPage,
   /<!-- LEADERBOARD:START -->[\s\S]*?<!-- LEADERBOARD:END -->/,
   `<!-- LEADERBOARD:START -->\n${renderRows(players, goal)}\n              <!-- LEADERBOARD:END -->`,
   "LEADERBOARD"
@@ -172,8 +166,8 @@ function validateRecords(records) {
   }
 
   const header = nonBlank[0].fields.map((field) => field.trim().toLowerCase());
-  if (header.length !== 2 || header[0] !== "username" || header[1] !== "gold") {
-    fail(`Row ${nonBlank[0].line}: expected header "username,gold".`);
+  if (header.length !== 2 || header[0] !== "username" || !["envelopes", "gold"].includes(header[1])) {
+    fail(`Row ${nonBlank[0].line}: expected header "username,envelopes".`);
   }
 
   const seen = new Set();
@@ -185,19 +179,19 @@ function validateRecords(records) {
     }
 
     const username = record.fields[0].trim();
-    const goldText = record.fields[1].trim();
+    const envelopeText = record.fields[1].trim();
 
     if (!username) {
       fail(`Row ${record.line}: username is required.`);
     }
 
-    if (!/^\d+$/.test(goldText)) {
-      fail(`Row ${record.line}: gold must be a non-negative integer.`);
+    if (!/^\d+$/.test(envelopeText)) {
+      fail(`Row ${record.line}: envelopes must be a non-negative integer.`);
     }
 
-    const gold = Number.parseInt(goldText, 10);
+    const gold = Number.parseInt(envelopeText, 10);
     if (!Number.isSafeInteger(gold)) {
-      fail(`Row ${record.line}: gold is too large.`);
+      fail(`Row ${record.line}: envelopes count is too large.`);
     }
 
     const duplicateKey = username.toLowerCase();
@@ -244,13 +238,13 @@ function renderRows(players, goal) {
         : progress.toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
       const topClass = rank <= 3 ? " leaderboard-row--top" : "";
       const ready = player.gold >= goal
-        ? `\n                  <span class="ready-marker">Ready to redeem</span>`
+        ? `\n                  <span class="ready-marker">Free pack earned</span>`
         : "";
 
       return `              <tr class="leaderboard-row${topClass}" data-collector="${escapeAttribute(player.username.toLowerCase())}">
                 <td class="rank-cell" data-label="Rank">${rank}</td>
                 <td data-label="Collector">${escapeHtml(player.username)}</td>
-                <td class="gold-cell" data-label="Gold">${player.gold}</td>
+                <td class="envelope-cell" data-label="Envelopes">${player.gold}</td>
                 <td data-label="Progress">
                   <span class="progress-text">${player.gold} / ${goal}</span>${ready}
                   <span class="progress-track" aria-hidden="true">
