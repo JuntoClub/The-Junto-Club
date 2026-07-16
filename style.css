@@ -140,15 +140,15 @@ body {
 }
 
 .leaderboard-shell {
-  width: min(100% - 24px, 880px);
+  width: min(100% - 32px, 920px);
   margin: 0 auto;
-  padding: 30px 0 54px;
+  padding: 34px 0 54px;
 }
 
 .leaderboard-hero {
   display: grid;
   justify-items: center;
-  gap: 18px;
+  gap: 22px;
   width: 100%;
   text-align: center;
 }
@@ -156,7 +156,7 @@ body {
 .leaderboard-logo {
   display: grid;
   place-items: center;
-  width: min(220px, 62vw);
+  width: min(340px, 86vw);
   min-height: 0;
   text-decoration: none;
 }
@@ -164,8 +164,8 @@ body {
 .leaderboard-logo object {
   display: block;
   width: 100%;
+  height: auto;
   max-width: 100%;
-  max-height: 220px;
   pointer-events: none;
 }
 
@@ -182,7 +182,7 @@ body {
   text-align: center;
 }
 
-.brand-links,
+.leaderboard-actions,
 .leaderboard-footer {
   display: grid;
   grid-template-columns: 1fr;
@@ -190,7 +190,7 @@ body {
   width: 100%;
 }
 
-.brand-links a,
+.leaderboard-actions a,
 .leaderboard-toggle,
 .signup-form button,
 .leaderboard-footer a {
@@ -211,16 +211,15 @@ body {
   text-transform: uppercase;
 }
 
-.brand-links a:hover,
+.leaderboard-actions a:hover,
 .leaderboard-toggle:hover,
 .signup-form button:hover,
 .leaderboard-footer a:hover {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.leaderboard-hero h1,
 .leaderboard-card h2,
-.rules-section h2,
+.rules h2,
 .signup-panel h2 {
   margin: 0;
   color: #fff;
@@ -230,22 +229,22 @@ body {
   text-transform: uppercase;
 }
 
-.leaderboard-hero h1 {
-  width: 100%;
-  max-width: 100%;
-  font-size: clamp(1.85rem, 8vw, 4.8rem);
-  text-wrap: balance;
-}
-
-.leaderboard-hero p {
-  max-width: min(34rem, 100%);
+.leaderboard-tagline {
+  max-width: min(36rem, 100%);
   margin: 0;
   color: rgba(247, 244, 236, 0.84);
-  font-size: clamp(1rem, 4vw, 1.25rem);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.leaderboard-tagline a,
+.rules a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .leaderboard-card,
-.rules-section {
+.rules {
   margin-top: 52px;
 }
 
@@ -255,7 +254,7 @@ body {
 }
 
 .leaderboard-card h2,
-.rules-section h2,
+.rules h2,
 .signup-panel h2 {
   font-size: clamp(1.35rem, 7vw, 2.35rem);
 }
@@ -288,7 +287,7 @@ body {
 
 .leaderboard-search input:focus,
 .signup-email input:focus,
-.brand-links a:focus-visible,
+.leaderboard-actions a:focus-visible,
 .leaderboard-toggle:focus-visible,
 .signup-form button:focus-visible,
 .leaderboard-footer a:focus-visible {
@@ -306,14 +305,12 @@ body {
 
 .leaderboard-table-wrap {
   margin-top: 24px;
-  overflow-x: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.26);
   border-bottom: 1px solid rgba(255, 255, 255, 0.26);
 }
 
 .leaderboard-table {
   width: 100%;
-  min-width: 620px;
   border-collapse: collapse;
 }
 
@@ -353,7 +350,7 @@ body {
 }
 
 .rank-cell,
-.gold-cell,
+.envelope-cell,
 .ready-marker {
   color: #c9a227;
   font-weight: 700;
@@ -392,6 +389,10 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.leaderboard-actions {
+  margin-top: 26px;
+}
+
 .signup-panel {
   margin-top: 34px;
   padding-top: 32px;
@@ -426,12 +427,30 @@ body {
   margin-top: 24px;
 }
 
-.rules-section {
+.rules {
   padding-top: 36px;
   border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-.rules-section ul {
+.rules p,
+.rules ul {
+  max-width: 56rem;
+}
+
+.rules p {
+  margin: 18px 0 0;
+  color: rgba(247, 244, 236, 0.82);
+}
+
+.rules h3 {
+  margin: 28px 0 0;
+  color: #fff;
+  font-size: 1.02rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.rules ul {
   display: grid;
   gap: 14px;
   margin: 20px 0 0;
@@ -440,12 +459,17 @@ body {
   color: rgba(247, 244, 236, 0.82);
 }
 
-.rules-section strong {
+.rules strong {
   color: #fff;
 }
 
+.rules-updated {
+  color: rgba(247, 244, 236, 0.62);
+  font-size: 0.92rem;
+}
+
 .leaderboard-footer {
-  width: min(100% - 32px, 880px);
+  width: min(100% - 32px, 920px);
   margin: 0 auto;
   padding: 0 0 34px;
 }
@@ -493,24 +517,19 @@ body {
 
 @media (max-width: 420px) {
   .leaderboard-shell {
-    width: min(100% - 20px, 880px);
+    width: min(100% - 24px, 920px);
     padding-top: 24px;
   }
 
   .leaderboard-logo {
-    width: min(190px, 56vw);
+    width: min(300px, 82vw);
   }
 
-  .leaderboard-logo object {
-    max-height: 190px;
+  .leaderboard-tagline {
+    font-size: 0.95rem;
   }
 
-  .leaderboard-hero h1 {
-    max-width: 100%;
-    font-size: clamp(1.48rem, 7.5vw, 2rem);
-  }
-
-  .brand-links a {
+  .leaderboard-actions a {
     min-width: 0;
     padding-right: 10px;
     padding-left: 10px;
@@ -524,13 +543,11 @@ body {
   }
 
   .leaderboard-logo {
-    width: min(360px, 60vw);
-    min-height: 240px;
+    width: min(520px, 100%);
   }
 
-  .brand-links,
-  .leaderboard-footer {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .leaderboard-actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .leaderboard-toolbar {
