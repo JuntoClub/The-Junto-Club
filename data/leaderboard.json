@@ -1,7 +1,11 @@
 {
-  "updated": "2026-07-17T01:55:02.888Z",
+  "updated": "2026-07-17T10:57:55.879Z",
   "goal": 12,
   "players": [
+    {
+      "username": "nonna",
+      "gold": 12
+    },
     {
       "username": "traderbea",
       "gold": 11
