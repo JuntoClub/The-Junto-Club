@@ -1,10 +1,14 @@
 {
-  "updated": "2026-07-17T10:57:55.879Z",
+  "updated": "2026-07-18T10:39:57.380Z",
   "goal": 12,
   "players": [
     {
       "username": "nonna",
       "gold": 12
+    },
+    {
+      "username": "mega_breaks",
+      "gold": 11
     },
     {
       "username": "traderbea",
@@ -13,6 +17,10 @@
     {
       "username": "lexi",
       "gold": 10
+    },
+    {
+      "username": "juntoclubco",
+      "gold": 3
     },
     {
       "username": "poppa",
