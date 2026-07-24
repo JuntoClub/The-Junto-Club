@@ -8,6 +8,7 @@
     "stripe": "^22.2.0"
   },
   "scripts": {
-    "sync:leaderboard": "node scripts/sync-leaderboard.mjs"
+    "sync:leaderboard": "node scripts/sync-leaderboard.mjs",
+    "cotw:build": "node scripts/build_coin_of_week.mjs --verify"
   }
 }
