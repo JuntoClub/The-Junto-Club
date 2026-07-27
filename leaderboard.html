@@ -23,9 +23,18 @@
   <body class="leaderboard-page">
     <main class="leaderboard-shell">
       <header class="leaderboard-hero">
-        <a class="leaderboard-logo" href="/" aria-label="The Junto Club home">
-          <img src="assets/junto-logo.png" width="1254" height="1254" alt="The Junto Club">
+        <a class="leaderboard-banner" href="https://juntoclubco.com/" aria-label="The Junto Club home">
+          <img
+            src="assets/lucky-strike-hero.png"
+            width="1774"
+            height="887"
+            alt="The Junto Club — Lucky Strike"
+            onerror="this.hidden=true;this.nextElementSibling.hidden=false;"
+          >
+          <span class="leaderboard-banner-fallback" hidden>THE JUNTO CLUB</span>
         </a>
+
+        <a class="leaderboard-wordmark-link" href="https://juntoclubco.com/">THE JUNTO CLUB</a>
 
         <p class="leaderboard-tagline">
           Keep collecting envelopes for a free pack of
@@ -34,7 +43,13 @@
       </header>
 
       <section class="leaderboard-card" aria-labelledby="leaderboard-title">
-        <div class="leaderboard-toolbar">
+        <div class="leaderboard-frame">
+          <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
+          <span class="frame-corner frame-corner--tr" aria-hidden="true"></span>
+          <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
+          <span class="frame-corner frame-corner--bl" aria-hidden="true"></span>
+
+          <div class="leaderboard-toolbar">
           <h2 id="leaderboard-title">Collectors</h2>
           <label class="leaderboard-search">
             <span>Find your Whatnot username</span>
@@ -136,6 +151,7 @@
             </tbody>
           </table>
         </div>
+        </div>
 
         <nav class="leaderboard-actions" aria-label="Leaderboard actions">
           <a href="https://www.whatnot.com/s/RaZGlFHR" target="_blank" rel="noopener">WATCH ON WHATNOT</a>
@@ -145,7 +161,7 @@
 
         <section class="signup-panel" aria-labelledby="signup-title">
           <h2 id="signup-title">Show Alerts</h2>
-          <p>[Placeholder] Get notified about upcoming shows and drops.</p>
+          <p>Get notified about upcoming shows and drops.</p>
           <form
             class="signup-form"
             name="junto-leaderboard-signup"
@@ -269,7 +285,7 @@
           </li>
         </ul>
 
-        <p class="rules-updated"><em>Last updated: July 16, 2026</em></p>
+        <p class="rules-updated"><em>Last updated: <span id="rules-updated-date">July 26, 2026</span></em></p>
       </section>
       <!-- =============== END HOW IT WORKS / RULES =============== -->
     </main>
@@ -284,6 +300,12 @@
         var toggle = document.querySelector(".leaderboard-toggle");
         var search = document.getElementById("leaderboard-search");
         var rows = Array.prototype.slice.call(document.querySelectorAll(".leaderboard-row"));
+        var leaderboardUpdated = document.querySelector(".last-updated time");
+        var rulesUpdatedDate = document.getElementById("rules-updated-date");
+
+        if (leaderboardUpdated && rulesUpdatedDate) {
+          rulesUpdatedDate.textContent = leaderboardUpdated.textContent;
+        }
 
         function setExpanded(expanded) {
           root.classList.toggle("leaderboard-expanded", expanded);
