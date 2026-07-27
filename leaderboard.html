@@ -42,15 +42,8 @@
         </p>
       </header>
 
-      <section class="leaderboard-card" aria-labelledby="leaderboard-title">
+      <section class="leaderboard-card" aria-label="Leaderboard">
         <div class="leaderboard-frame">
-          <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
-          <span class="frame-corner frame-corner--tr" aria-hidden="true"></span>
-          <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
-          <span class="frame-corner frame-corner--bl" aria-hidden="true"></span>
-
-          <div class="leaderboard-toolbar">
-          <h2 id="leaderboard-title">Collectors</h2>
           <label class="leaderboard-search">
             <span>Find your Whatnot username</span>
             <input
@@ -62,95 +55,95 @@
               aria-describedby="leaderboard-search-note"
             >
           </label>
-        </div>
-        <p id="leaderboard-search-note" class="leaderboard-note">
-          Search highlights the first matching collector and opens the full board.
-        </p>
+          <p id="leaderboard-search-note" class="leaderboard-note">
+            Search your Whatnot username to see your envelope progress.
+          </p>
+          <div id="leaderboard-result" class="leaderboard-result" role="status" aria-live="polite" hidden></div>
 
-        <div class="leaderboard-table-wrap">
-          <table class="leaderboard-table">
-            <caption>Surprise Set Envelope totals for The Junto Club collectors</caption>
-            <thead>
-              <tr>
-                <th scope="col">Rank</th>
-                <th scope="col">Collector</th>
-                <th scope="col">Envelopes</th>
-                <th scope="col">Progress</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- LEADERBOARD:START -->
-              <tr class="leaderboard-row leaderboard-row--top" data-collector="nonna">
-                <td class="rank-cell" data-label="Rank">1</td>
-                <td data-label="Collector">nonna</td>
-                <td class="envelope-cell" data-label="Envelopes">12</td>
-                <td data-label="Progress">
-                  <span class="progress-text">12 / 12</span>
-                  <span class="ready-marker">Free pack earned</span>
-                  <span class="progress-track" aria-hidden="true">
-                    <span class="progress-fill" style="width: 100%;"></span>
-                  </span>
-                </td>
-              </tr>
-              <tr class="leaderboard-row leaderboard-row--top" data-collector="mega_breaks">
-                <td class="rank-cell" data-label="Rank">2</td>
-                <td data-label="Collector">mega_breaks</td>
-                <td class="envelope-cell" data-label="Envelopes">11</td>
-                <td data-label="Progress">
-                  <span class="progress-text">11 / 12</span>
-                  <span class="progress-track" aria-hidden="true">
-                    <span class="progress-fill" style="width: 91.67%;"></span>
-                  </span>
-                </td>
-              </tr>
-              <tr class="leaderboard-row leaderboard-row--top" data-collector="traderbea">
-                <td class="rank-cell" data-label="Rank">3</td>
-                <td data-label="Collector">traderbea</td>
-                <td class="envelope-cell" data-label="Envelopes">11</td>
-                <td data-label="Progress">
-                  <span class="progress-text">11 / 12</span>
-                  <span class="progress-track" aria-hidden="true">
-                    <span class="progress-fill" style="width: 91.67%;"></span>
-                  </span>
-                </td>
-              </tr>
-              <tr class="leaderboard-row" data-collector="lexi">
-                <td class="rank-cell" data-label="Rank">4</td>
-                <td data-label="Collector">lexi</td>
-                <td class="envelope-cell" data-label="Envelopes">10</td>
-                <td data-label="Progress">
-                  <span class="progress-text">10 / 12</span>
-                  <span class="progress-track" aria-hidden="true">
-                    <span class="progress-fill" style="width: 83.33%;"></span>
-                  </span>
-                </td>
-              </tr>
-              <tr class="leaderboard-row" data-collector="juntoclubco">
-                <td class="rank-cell" data-label="Rank">5</td>
-                <td data-label="Collector">juntoclubco</td>
-                <td class="envelope-cell" data-label="Envelopes">3</td>
-                <td data-label="Progress">
-                  <span class="progress-text">3 / 12</span>
-                  <span class="progress-track" aria-hidden="true">
-                    <span class="progress-fill" style="width: 25%;"></span>
-                  </span>
-                </td>
-              </tr>
-              <tr class="leaderboard-row" data-collector="poppa">
-                <td class="rank-cell" data-label="Rank">6</td>
-                <td data-label="Collector">poppa</td>
-                <td class="envelope-cell" data-label="Envelopes">2</td>
-                <td data-label="Progress">
-                  <span class="progress-text">2 / 12</span>
-                  <span class="progress-track" aria-hidden="true">
-                    <span class="progress-fill" style="width: 16.67%;"></span>
-                  </span>
-                </td>
-              </tr>
-              <!-- LEADERBOARD:END -->
-            </tbody>
-          </table>
-        </div>
+          <div class="leaderboard-table-wrap">
+            <table class="leaderboard-table">
+              <caption>Surprise Set Envelope totals for The Junto Club collectors</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Rank</th>
+                  <th scope="col">Collector</th>
+                  <th scope="col">Envelopes</th>
+                  <th scope="col">Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- LEADERBOARD:START -->
+                <tr class="leaderboard-row leaderboard-row--top" data-collector="nonna">
+                  <td class="rank-cell" data-label="Rank">1</td>
+                  <td data-label="Collector">nonna</td>
+                  <td class="envelope-cell" data-label="Envelopes">12</td>
+                  <td data-label="Progress">
+                    <span class="progress-text">12 / 12</span>
+                    <span class="ready-marker">Free pack earned</span>
+                    <span class="progress-track" aria-hidden="true">
+                      <span class="progress-fill" style="width: 100%;"></span>
+                    </span>
+                  </td>
+                </tr>
+                <tr class="leaderboard-row leaderboard-row--top" data-collector="mega_breaks">
+                  <td class="rank-cell" data-label="Rank">2</td>
+                  <td data-label="Collector">mega_breaks</td>
+                  <td class="envelope-cell" data-label="Envelopes">11</td>
+                  <td data-label="Progress">
+                    <span class="progress-text">11 / 12</span>
+                    <span class="progress-track" aria-hidden="true">
+                      <span class="progress-fill" style="width: 91.67%;"></span>
+                    </span>
+                  </td>
+                </tr>
+                <tr class="leaderboard-row leaderboard-row--top" data-collector="traderbea">
+                  <td class="rank-cell" data-label="Rank">3</td>
+                  <td data-label="Collector">traderbea</td>
+                  <td class="envelope-cell" data-label="Envelopes">11</td>
+                  <td data-label="Progress">
+                    <span class="progress-text">11 / 12</span>
+                    <span class="progress-track" aria-hidden="true">
+                      <span class="progress-fill" style="width: 91.67%;"></span>
+                    </span>
+                  </td>
+                </tr>
+                <tr class="leaderboard-row" data-collector="lexi">
+                  <td class="rank-cell" data-label="Rank">4</td>
+                  <td data-label="Collector">lexi</td>
+                  <td class="envelope-cell" data-label="Envelopes">10</td>
+                  <td data-label="Progress">
+                    <span class="progress-text">10 / 12</span>
+                    <span class="progress-track" aria-hidden="true">
+                      <span class="progress-fill" style="width: 83.33%;"></span>
+                    </span>
+                  </td>
+                </tr>
+                <tr class="leaderboard-row" data-collector="juntoclubco">
+                  <td class="rank-cell" data-label="Rank">5</td>
+                  <td data-label="Collector">juntoclubco</td>
+                  <td class="envelope-cell" data-label="Envelopes">3</td>
+                  <td data-label="Progress">
+                    <span class="progress-text">3 / 12</span>
+                    <span class="progress-track" aria-hidden="true">
+                      <span class="progress-fill" style="width: 25%;"></span>
+                    </span>
+                  </td>
+                </tr>
+                <tr class="leaderboard-row" data-collector="poppa">
+                  <td class="rank-cell" data-label="Rank">6</td>
+                  <td data-label="Collector">poppa</td>
+                  <td class="envelope-cell" data-label="Envelopes">2</td>
+                  <td data-label="Progress">
+                    <span class="progress-text">2 / 12</span>
+                    <span class="progress-track" aria-hidden="true">
+                      <span class="progress-fill" style="width: 16.67%;"></span>
+                    </span>
+                  </td>
+                </tr>
+                <!-- LEADERBOARD:END -->
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <nav class="leaderboard-actions" aria-label="Leaderboard actions">
@@ -299,6 +292,7 @@
         var root = document.documentElement;
         var toggle = document.querySelector(".leaderboard-toggle");
         var search = document.getElementById("leaderboard-search");
+        var result = document.getElementById("leaderboard-result");
         var rows = Array.prototype.slice.call(document.querySelectorAll(".leaderboard-row"));
         var leaderboardUpdated = document.querySelector(".last-updated time");
         var rulesUpdatedDate = document.getElementById("rules-updated-date");
@@ -323,23 +317,105 @@
           });
         }
 
-        if (search) {
+        function getCellText(row, label) {
+          var cell = row.querySelector('[data-label="' + label + '"]');
+          return cell ? cell.textContent.trim() : "";
+        }
+
+        function appendText(parent, className, text) {
+          var element = document.createElement("span");
+          element.className = className;
+          element.textContent = text;
+          parent.appendChild(element);
+          return element;
+        }
+
+        function renderResult(row) {
+          var card = document.createElement("article");
+          var header = document.createElement("div");
+          var meta = document.createElement("div");
+          var progress = document.createElement("div");
+          var progressTrack = row.querySelector(".progress-track");
+          var readyMarker = row.querySelector(".ready-marker");
+          var collector = getCellText(row, "Collector");
+          var rank = getCellText(row, "Rank");
+          var envelopes = getCellText(row, "Envelopes");
+          var progressText = getCellText(row, "Progress").replace("Free pack earned", "").trim();
+
+          result.className = "leaderboard-result";
+          result.textContent = "";
+
+          card.className = "leaderboard-result-card";
+          header.className = "leaderboard-result-header";
+          meta.className = "leaderboard-result-meta";
+          progress.className = "leaderboard-result-progress";
+
+          appendText(header, "leaderboard-result-rank", "Standing #" + rank);
+          appendText(header, "leaderboard-result-name", collector);
+          appendText(meta, "leaderboard-result-count", envelopes + " envelopes");
+          appendText(meta, "leaderboard-result-progress-text", progressText);
+
+          if (readyMarker) {
+            appendText(meta, "ready-marker", readyMarker.textContent.trim() + " / Ready to redeem");
+          }
+
+          if (progressTrack) {
+            progress.appendChild(progressTrack.cloneNode(true));
+          }
+
+          card.appendChild(header);
+          card.appendChild(meta);
+          card.appendChild(progress);
+          result.appendChild(card);
+          result.hidden = false;
+        }
+
+        function renderNoMatch() {
+          result.className = "leaderboard-result leaderboard-result--empty";
+          result.textContent = "No collector found by that name — envelopes are credited after each show.";
+          result.hidden = false;
+        }
+
+        function clearResult() {
+          root.classList.remove("leaderboard-searching");
+          if (result) {
+            result.hidden = true;
+            result.textContent = "";
+          }
+        }
+
+        if (search && result) {
           search.addEventListener("input", function () {
             var query = search.value.trim().toLowerCase();
-            var match = null;
+            var exactMatch = null;
+            var partialMatch = null;
 
-            rows.forEach(function (row) {
-              row.classList.remove("leaderboard-row--match");
-              var collector = row.getAttribute("data-collector") || "";
-              if (!match && query && collector.indexOf(query) !== -1) {
-                match = row;
+            if (!query) {
+              clearResult();
+              return;
+            }
+
+            rows.some(function (row) {
+              var collector = (row.getAttribute("data-collector") || "").toLowerCase();
+
+              if (collector === query) {
+                exactMatch = row;
+                return true;
               }
+
+              if (!partialMatch && collector.indexOf(query) !== -1) {
+                partialMatch = row;
+              }
+
+              return false;
             });
 
-            if (match) {
-              setExpanded(true);
-              match.classList.add("leaderboard-row--match");
-              match.scrollIntoView({ block: "center", behavior: "smooth" });
+            root.classList.add("leaderboard-searching");
+
+            if (exactMatch || partialMatch) {
+              renderResult(exactMatch || partialMatch);
+            } else {
+              renderNoMatch();
             }
           });
         }
